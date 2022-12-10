@@ -1,14 +1,24 @@
 <?php
 
-$name = readline("Как вас зовут? \n");
-print "Приветствую, $name" . ". Запланируйте на сегодня 3 важных задачи.\n";
+$taskQue = "Какая задача стоит перед вами сегодня? ";
+$timeQue = "Сколько времени займет эта задача? ";
 
-$task1 = readline("Какая задача стоит перед вами сегодня? \n");
-$time1 = readline("Сколько времени займет эта задача? (время в часах) \n");
-$task2 = readline("Какая задача стоит перед вами сегодня? \n");
-$time2 = readline("Сколько времени займет эта задача? (время в часах) \n");
-$task3 = readline("Какая задача стоит перед вами сегодня? \n");
-$time3 = readline("Сколько времени займет эта задача? (время в часах) \n");
-$timeall = $time1 + $time2 + $time3 . "ч";
+$name = readline("Как вас зовут? ");
+echo "Приветствую, $name" . "! Запланируйте список задач на день.\n";
 
-print "$name," . "вы запланировали 3 приоритетных задачи на день:\n -$task1 ($time1)\n -$task2 ($time2)\n -$task3 ($time3)\nПримерное время выполнения - $timeall ";
+$task1 = readline($taskQue);
+$time1 = (int)readline($timeQue);
+
+$task2 = readline($taskQue);
+$time2 = (int)readline($timeQue);
+
+$task3 = readline($taskQue);
+$time3 = (int)readline($timeQue);
+
+$timeall = $time1 + $time2 + $time3;
+
+echo "{$name}, вы запланировали 3 приоритетных задачи на день:
+- {$task1} ({$time1}ч)
+- {$task2} ({$time2}ч)
+- {$task3} ({$time3}ч)
+Примерное время выполнения - {$timeall}ч";
