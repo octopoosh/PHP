@@ -1,14 +1,13 @@
 <?php
 
-$year = null;
 
-while (true) {
+do {
     $year = (int)readline("В каком году Москва была впервые упомянута в летописи: А)988, Б)1147, В)1223?\n");
-    if ($year == 1147) {
+    if ($year == "1147") {
         echo "Ответ правильный!";
         break;
-    } else {
+    } elseif ($year == "988" || $year == "1223") {
         echo "Ответ неправильный.";
         break;
     }
-}
+} while (true);
